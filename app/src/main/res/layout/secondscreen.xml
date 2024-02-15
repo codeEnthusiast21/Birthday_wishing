@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".secondScreen">
+
+ <LinearLayout
+     android:id="@+id/linearLayout1"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     app:layout_constraintTop_toTopOf="parent">
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:layout_margin="80dp"
+      android:layout_weight="1"
+      android:elevation="30dp"
+      app:cardCornerRadius="15dp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/gradient"
+        android:padding="20dp"
+        android:text="CONGRATULATIONS ON\n TURNING"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/cage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/gradient2"
+        android:padding="20dp"
+        android:textAlignment="center" />
+   </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/wishText"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:textAlignment="center"
+      android:textColor="@drawable/gradient"
+      android:layout_weight="1"
+      android:textSize="50sp"
+      android:textStyle="bold|italic" />
+
+ </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     app:layout_constraintBottom_toBottomOf="parent">
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:scaleX="3"
+      android:scaleY="3"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/wish2" />
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:scaleX="3"
+      android:scaleY="3"
+      android:layout_gravity="end"
+      android:layout_weight="1"
+      android:rotationY="180"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/wish2" />
+ </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
