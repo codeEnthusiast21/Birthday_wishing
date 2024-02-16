@@ -7,89 +7,121 @@
     android:orientation="vertical"
     tools:context=".secondScreen">
 
- <LinearLayout
-     android:id="@+id/linearLayout1"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:orientation="vertical"
+
+ <androidx.cardview.widget.CardView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center"
+     android:layout_margin="80dp"
+     android:layout_weight="1"
+     android:elevation="30dp"
+     app:cardCornerRadius="20dp"
+     app:layout_constraintBottom_toTopOf="@+id/horiguide"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent">
 
-  <androidx.cardview.widget.CardView
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_gravity="center"
-      android:layout_margin="80dp"
-      android:layout_weight="1"
-      android:elevation="30dp"
-      app:cardCornerRadius="15dp">
+      android:orientation="vertical">
 
-   <LinearLayout
+
+   <TextView
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical">
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:background="@drawable/gradient"
+       android:padding="20dp"
+       android:text="CONGRATULATIONS ON\n TURNING"
+       android:textAlignment="center"
+       android:textSize="15sp"
+       android:textStyle="bold|italic" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/gradient"
-        android:padding="20dp"
-        android:text="CONGRATULATIONS ON\n TURNING"
-        android:textAlignment="center"
-        android:textSize="15sp"
-        android:textStyle="bold|italic" />
+   <TextView
+       android:id="@+id/cage"
+       android:layout_width="match_parent"
+       android:layout_height="85dp"
+       android:layout_weight="1"
+       android:background="@drawable/gradient2"
+       android:padding="20dp"
+       android:textAlignment="center" />
+  </LinearLayout>
+ </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/cage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/gradient2"
-        android:padding="20dp"
-        android:textAlignment="center" />
-   </LinearLayout>
-  </androidx.cardview.widget.CardView>
 
-  <TextView
-      android:id="@+id/wishText"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_gravity="center"
-      android:textAlignment="center"
-      android:textColor="@drawable/gradient"
-      android:layout_weight="1"
-      android:textSize="50sp"
-      android:textStyle="bold|italic" />
+ <TextView
+     android:id="@+id/wishText"
+     android:layout_width="295dp"
+     android:layout_height="0dp"
+     android:layout_gravity="center"
+     android:layout_weight="1"
+     android:textAlignment="center"
+     android:textColor="@drawable/gradient"
+     android:textSize="50sp"
+     android:textStyle="bold|italic"
+     app:layout_constraintBottom_toTopOf="@+id/hori2guide"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="@+id/horiguide" />
 
- </LinearLayout>
+ <com.airbnb.lottie.LottieAnimationView
+     android:layout_width="200dp"
+     android:layout_height="wrap_content"
+     android:scaleX="3"
+     android:scaleY="3"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/horiguide"
+     app:lottie_autoPlay="true"
+     app:lottie_loop="true"
+     app:lottie_rawRes="@raw/wish2" />
 
- <LinearLayout
-     android:layout_width="match_parent"
+ <com.airbnb.lottie.LottieAnimationView
+     android:id="@+id/lottieAnimationView"
+     android:layout_width="200dp"
+     android:layout_height="wrap_content"
+     android:layout_gravity="end"
+     android:layout_weight="1"
+     android:rotationY="180"
+     android:scaleX="3"
+     android:scaleY="3"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="@+id/vertiguide"
+     app:layout_constraintTop_toBottomOf="@id/wishText"
+     app:layout_constraintTop_toTopOf="@+id/horiguide"
+     app:lottie_autoPlay="true"
+     app:lottie_loop="true"
+     app:lottie_rawRes="@raw/wish2" />
+
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/horiguide"
+     app:layout_constraintBottom_toBottomOf="parent"
+     android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:orientation="horizontal"
-     app:layout_constraintBottom_toBottomOf="parent">
+     app:layout_constraintGuide_percent="0.5" />
 
-  <com.airbnb.lottie.LottieAnimationView
-      android:layout_width="200dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:scaleX="3"
-      android:scaleY="3"
-      app:lottie_autoPlay="true"
-      app:lottie_loop="true"
-      app:lottie_rawRes="@raw/wish2" />
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/vertiguide"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     app:layout_constraintGuide_percent="0.5" />
 
-  <com.airbnb.lottie.LottieAnimationView
-      android:layout_width="200dp"
-      android:layout_height="wrap_content"
-      android:scaleX="3"
-      android:scaleY="3"
-      android:layout_gravity="end"
-      android:layout_weight="1"
-      android:rotationY="180"
-      app:lottie_autoPlay="true"
-      app:lottie_loop="true"
-      app:lottie_rawRes="@raw/wish2" />
- </LinearLayout>
+ <androidx.constraintlayout.widget.Barrier
+     android:id="@+id/barrier"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:barrierDirection="top" />
+
+ <androidx.constraintlayout.widget.Guideline
+     android:id="@+id/hori2guide"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     app:layout_constraintGuide_percent="0.75" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
