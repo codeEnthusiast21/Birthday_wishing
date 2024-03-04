@@ -7,18 +7,20 @@ import android.widget.Button
 import android.widget.EditText
 
 class firstScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.firstscreen)
         val a=findViewById<EditText>(R.id.edt1)
         val b=findViewById<EditText>(R.id.edt2)
         val c=findViewById<Button>(R.id.btn1)
-        c.setOnClickListener(){
-            val d= a.text.toString()
-            val e= b.text.toString()
+        c.setOnClickListener{
+            val name= a.text.toString()
+            val age= b.text.toString()
             val intent= Intent(this,secondScreen::class.java)
-            intent.putExtra("Name",d)
-            intent.putExtra("age",e)
+
+            intent.putExtra("Name",name)
+            intent.putExtra("age",age)
             startActivity(intent)
 
         }

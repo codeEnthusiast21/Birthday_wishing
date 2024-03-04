@@ -13,8 +13,8 @@ class secondScreen : AppCompatActivity() {
         val age=intent.getStringExtra("age")
         val name=intent.getStringExtra("Name")
         val c = age?.toInt()
-        val intage= 2024 - c!!
-        congrats.text="$intage years old !"
+        val intage= 2024-c!!
+        congrats.text= "$intage years old !"
         wish.text= "HAPPY BIRTHDAY \n $name"
 
     }
